@@ -4,27 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
     <title>Clube da Oferta</title>
 </head>
 <body>
-    <header class="cabecalho">
+    <header id="home" class="cabecalho">
     
         <img src="./imagens/logo.webp" alt="img logo" class="logo">
-        <nav class="navegacao">
-            <a href="#home">Home</a>
-            <a href="#ofertas">Ofertas</a>
-            <a href="#marcas">Marcas</a>
-            <a href="#contato">Contato</a>
-            <a href="#nossa-historia">Nossa Historia</a>
-            
+        <nav class="navegacaoDesktop">
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                    <a href="#ofertas">Ofertas</a>
+                    <a href="#marcas">Marcas</a>
+                    <a href="#contato">Contato</a>
+                    <a href="#nossa-historia">Nossa Historia</a>
+                </li>
+            </ul>
         </nav>
-    
+        <img class="btnAbrirMenu" id="btnAbrirMenu" src="./imagens/menu-hamburguer.png" alt="btnAbrirMenu">
+
+        <nav class="navegacaoMobile">
+            <img class="btnFecharMenu" id="btnFecharMenu" src="./imagens/x.png" alt="btnCloseMenu">
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                    <a href="#ofertas">Ofertas</a>
+                    <a href="#marcas">Marcas</a>
+                    <a href="#contato">Contato</a>
+                    <a href="#nossa-historia">Nossa Historia</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main class="corpo" id="corpo">
-        <h1>Bem-vindo ao Clube da Oferta</h1>
-        <p class="subTitulo">Tudo com o melhor preço em um só lugar!</p>
-
         <section class="areaCarrossel">
             <div class="carrossel">
                 <div class="slides">
@@ -35,106 +50,70 @@
             
                 <button id="btnAnterior" class="anterior" onclick="mudarSlide(-1)">&#10094;</button>
                 <button id="btnProximo" class="proximo" onclick="mudarSlide(1)">&#10095;</button>
-                </div>
+            </div>
         </section>
+        <h1>Tudo com o melhor preço em um só lugar!</h1>
 
         <section class="ofertas" id="ofertas">
-
-            <h2>Ofertas Imperdíveis</h2>
+        
             <div id="area-itens-oferta">
-            <div class="oferta-item">
-                <h3>Produto 1</h3>
-                <img src="" alt="foto produto">
-                <p>Descrição do Produto 1</p>
-                <p>Preço: R$ 99,99</p>
+                <div class="oferta-item">
+                    <h3>Club Social </h3>
+                    <img src="./imagens/clube social.webp" alt="foto clube social">
+                    <p>Biscoito Recheado Queijo E Tomate 106g</p>
+                    <button class="btnEntrarNoGrupoDoWhats" onclick="entrarNoGrupoDoWhats()">Acesse nosso grupo</button>
+                </div>
+                <div class="oferta-item">
+                    <h3>Chocolate Bisão</h3>
+                    <img src="./imagens/bis.webp" alt="foto bis">
+                    <p>Ao Leite 201,6g</p>
+                    <button class="btnEntrarNoGrupoDoWhats" onclick="entrarNoGrupoDoWhats()">Acesse nosso grupo</button>
+                </div>
+                <div class="oferta-item">
+                    <h3>Biscoite Piraquê</h3>
+                    <img src="./imagens/biscoitopiraque.webp" alt="foto biscoito piraquê">
+                    <p>Biscoito Roladinho Recheio Goiabinha Piraquê Pacote 75g</p>
+                    <button class="btnEntrarNoGrupoDoWhats" onclick="entrarNoGrupoDoWhats()">Acesse nosso grupo</button>
+                </div>
+                <div class="oferta-item">
+                    <h3>Chocolate Passatempo</h3>
+                    <img src="./imagens/passatempo.webp" alt="foto Chocolate Passatempo">
+                    <p>Biscoito Recheio Chocolate Passatempo Pacote 130g</p>
+                    <button class="btnEntrarNoGrupoDoWhats" onclick="entrarNoGrupoDoWhats()">Acesse nosso grupo</button>
+                </div>
+                <div class="oferta-item">
+                    <h3>Biscoito Trakinas</h3>
+                    <img src="./imagens/biscoito trakinas.webp" alt="foto Biscoito Trakinas">
+                    <p>Biscoito Recheado Sabor Chocolate 126g Trakinas</p>
+                    <button class="btnEntrarNoGrupoDoWhats" onclick="entrarNoGrupoDoWhats()">Acesse nosso grupo</button>
+                </div>
+                <div class="oferta-item">
+                    <h3>Rosquinha de Coco</h3>
+                    <img src="./imagens/rosquinhas.webp" alt="foto Rosquinha de Coco">
+                    <p>Panco Rosquinha de Coco - Leite - 500 g - Kit - 3</p>
+                    <button class="btnEntrarNoGrupoDoWhats" onclick="entrarNoGrupoDoWhats()">Acesse nosso grupo</button>
+                </div>
             </div>
-            <div class="oferta-item">
-                <h3>Produto 2</h3>
-                <img src="" alt="foto produto">
-                <p>Descrição do Produto 2</p>
-                <p>Preço: R$ 149,99</p>
-            </div>
-            <div class="oferta-item">
-                <h3>Produto 3</h3>
-                <img src="" alt="foto produto">
-                <p>Descrição do Produto 3</p>
-                <p>Preço: R$ 199,99</p>
-            </div>
-            <div class="oferta-item">
-                <h3>Produto 1</h3>
-                <img src="" alt="foto produto">
-                <p>Descrição do Produto 1</p>
-                <p>Preço: R$ 99,99</p>
-            </div>
-            <div class="oferta-item">
-                <h3>Produto 2</h3>
-                <img src="" alt="foto produto">
-                <p>Descrição do Produto 2</p>
-                <p>Preço: R$ 149,99</p>
-            </div>
-            <div class="oferta-item">
-                <h3>Produto 3</h3>
-                <img src="" alt="foto produto">
-                <p>Descrição do Produto 3</p>
-                <p>Preço: R$ 199,99</p>
-            </div>
-            <div class="oferta-item">
-                <h3>Produto 1</h3>
-                <img src="" alt="foto produto">
-                <p>Descrição do Produto 1</p>
-                <p>Preço: R$ 99,99</p>
-            </div>
-            <div class="oferta-item">
-                <h3>Produto 2</h3>
-                <img src="" alt="foto produto">
-                <p>Descrição do Produto 2</p>
-                <p>Preço: R$ 149,99</p>
-            </div>
-            <div class="oferta-item">
-                <h3>Produto 3</h3>
-                <img src="" alt="foto produto">
-                <p>Descrição do Produto 3</p>
-                <p>Preço: R$ 199,99</p>
-            </div>
-            <div class="oferta-item">
-                <h3>Produto 1</h3>
-                <img src="" alt="foto produto">
-                <p>Descrição do Produto 1</p>
-                <p>Preço: R$ 99,99</p>
-            </div>
-            <div class="oferta-item">
-                <h3>Produto 2</h3>
-                <img src="" alt="foto produto">
-                <p>Descrição do Produto 2</p>
-                <p>Preço: R$ 149,99</p>
-            </div>
-            <div class="oferta-item">
-                <h3>Produto 3</h3>
-                <img src="" alt="foto produto">
-                <p>Descrição do Produto 3</p>
-                <p>Preço: R$ 199,99</p>
-            </div>
-            
         </div>
         </section>
 
         <section class="marcas" id="marcas">
             <h2>As melhores marcas do mercado estão aqui!</h2>
             <ul class="listaMarcas">
-                <img src="./imagens/logo.webp" alt="" class="imigMarcas">
-                <img src="./imagens/logo.webp" alt="" class="imigMarcas">
-                <img src="./imagens/logo.webp" alt="" class="imigMarcas">
-                <img src="./imagens/logo.webp" alt="" class="imigMarcas">
-                <img src="./imagens/logo.webp" alt="" class="imigMarcas">
-                <img src="./imagens/logo.webp" alt="" class="imigMarcas">
-                <img src="./imagens/logo.webp" alt="" class="imigMarcas">
-                <img src="./imagens/logo.webp" alt="" class="imigMarcas">
-                <img src="./imagens/logo.webp" alt="" class="imigMarcas">
-                <img src="./imagens/logo.webp" alt="" class="imigMarcas">
-                <img src="./imagens/logo.webp" alt="" class="imigMarcas">
-                <img src="./imagens/logo.webp" alt="" class="imigMarcas">
-                <img src="./imagens/logo.webp" alt="" class="imigMarcas">
-                <img src="./imagens/logo.webp" alt="" class="imigMarcas">
+                <img src="./imagens/pullman.png" alt="pullman" class="imigMarcas">
+                <img src="./imagens/aurora.png" alt="aurora" class="imigMarcas">
+                <img src="./imagens/lacta.webp" alt="lacta" class="imigMarcas">
+                <img src="./imagens/perdigao.png" alt="perdigao" class="imigMarcas">
+                <img src="./imagens/bauduco.webp" alt="bauduco" class="imigMarcas">
+                <img src="./imagens/president.webp" alt="president" class="imigMarcas">
+                <img src="./imagens/danone.webp" alt="danone" class="imigMarcas">
+                <img src="./imagens/qualy.webp" alt="qualy" class="imigMarcas">
+                <img src="./imagens/nestle.webp" alt="nestle" class="imigMarcas">
+                <img src="./imagens/batavo.webp" alt="batavo" class="imigMarcas">
+                <img src="./imagens/coca-cola.webp" alt="coca-cola" class="imigMarcas">
+                <img src="./imagens/ana maria.webp" alt="ana maria" class="imigMarcas">
+                <img src="./imagens/itambe.webp" alt="itambe" class="imigMarcas">
+                <img src="./imagens/friboi.webp" alt="friboi" class="imigMarcas">
             </ul>
         </section>
 
@@ -157,18 +136,18 @@
         <section class="nossaHistoria" id="nossa-historia">
             <h2>Nossa História</h2>
             <div class="divHistoria">
-                <p>O Clube da Oferta foi fundado com o objetivo de oferecer os melhores produtos com preços imbatíveis. Nossa missão é proporcionar uma experiência de compra única e satisfatória para nossos cpentes.</p>
+                <p>O Clube da Oferta foi fundado com o objetivo de oferecer os melhores produtos com preços imbatíveis. Nossa missão é proporcionar uma experiência de compra única e satisfatória para nossos clientes.</p>
             </div>
             
         </section>
 
     </main>
 
-    <script src="script.js"></script>
+
     
 </body>
 <footer>
-    <p class="pFooter">Desenvolvido por HSO Solutions </p>
-    <p class="pFooter">TODOS OS DIREITOS RESERVADOS</p>
+    <p class="pFooter"><a href=""></a>Desenvolvido por HSO Solutions </p>
+    <p class="pFooter">TODOS OS DIREITOS RESERVADOS - 2025</p>
 </footer>
 </html>
